@@ -4,3 +4,4 @@ gradio
 torch
 torchaudio
 torchvision
+urllib

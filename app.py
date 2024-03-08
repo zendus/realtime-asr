@@ -78,6 +78,7 @@ def inference(audio, sentiment_option):
 title = """<h1 align="center">🎤 Multilingual ASR 💬</h1>"""
 image_path = "thmbnail.jpg"
 description = """
+<img src="thmbnail.jpg" alt="Thumbnail" style="display: block; margin-left: auto; margin-right: auto;">
 💻 This demo showcases a general-purpose speech recognition model called Whisper. It is trained on a large dataset of diverse audio and supports multilingual speech recognition, speech translation, and language identification tasks.<br><br>
 <br><br>
 ⚙️ Components of the tool:<br>
@@ -104,7 +105,7 @@ custom_css = """
     margin-right: auto;
 }
 #chat-message {
-    font-size: 14px;
+    font-size: 18px;
     min-height: 300px;
 }
 """
@@ -115,20 +116,20 @@ iface = gr.Interface(
     [
         gr.Audio(
             label="Input Audio",
-            show_label=False,
-            source="microphone",
+            show_label=True,
+            sources=["microphone"],
             type="filepath"
         ),
         gr.Radio(
             choices=["Sentiment Only", "Sentiment + Score"],
             label="Select an option",
-            default="Sentiment Only"
+            value="Sentiment Only"
         )
     ],
     [
         gr.Textbox(label="Language"),
         gr.Textbox(label="Transcription"),
-        gr.Textbox(label="Sentiment Analysis Results", output=True)
+        gr.Textbox(label="Sentiment Analysis Results")
     ],
     title=title,
     description=description,

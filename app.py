@@ -78,8 +78,7 @@ def inference(audio, sentiment_option):
 title = """<h1 align="center">🎤 Multilingual Automatic Speech Recognition and Sentiment Analyzer 💬</h1>"""
 image_path = "thmbnail.jpg"
 description = """
-<img src="https://images.pexels.com/photos/257904/pexels-photo-257904.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Thumbnail" style="display: block; margin-left: auto; margin-right: auto;">
-<br><
+<br>
 💻 This demo showcases a general-purpose speech recognition model called Whisper. It is trained on a large dataset of diverse audio and supports multilingual speech recognition, speech translation, and language identification tasks.<br><br>
 <br>
 ⚙️ Components of the tool:<br>

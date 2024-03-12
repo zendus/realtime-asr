@@ -11,6 +11,7 @@ def analyze_sentiment(text):
     sentiment_results = {result['label']: result['score'] for result in results}
     return sentiment_results
 
+
 # Define sentiment emojis
 def get_sentiment_emoji(sentiment):
     emoji_mapping = {
